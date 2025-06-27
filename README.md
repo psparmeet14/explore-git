@@ -2,6 +2,8 @@
 
 # Useful Git Commands
 
+👉 [Basics of Terminal Commands](BasicsOfTerminal.md)
+
 A handy list of commonly used Git commands with brief explanations.
 
 ---
