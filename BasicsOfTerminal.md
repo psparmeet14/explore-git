@@ -1,74 +1,140 @@
 # Basics of Terminal
 
-A collection of basic terminal commands for navigating and managing files and folders.
+A cross-platform collection of essential terminal commands for navigating and managing files, folders, and systems.
+
+> ⚠️ Notes:
+> - `CMD` refers to Windows Command Prompt  
+> - `PowerShell` is a more advanced shell on Windows  
+> - `Unix/Linux/macOS` refers to Bash-like environments  
+> - Commands marked with 🔒 may require admin or elevated privileges
 
 ---
 
 ## 📁 Navigation Commands
 
 **1. Show Current Directory**  
-pwd
+- CMD / PowerShell / Unix: `pwd`
 
-**2. Navigate to a Different Folder**  
-cd desktop
+**2. List Files and Folders**  
+- CMD: `dir`  
+- PowerShell / Unix: `ls`  
+- PowerShell (detailed): `ls -Force`
 
 **3. Navigate to a Folder**  
-cd myFolder
+- All: `cd folderName`
 
 **4. Go Back One Directory**  
-cd ..
+- All: `cd ..`
 
 **5. Go Back Two or More Directories**  
-cd ../..
+- All: `cd ../..`
 
-**6. Go to a Specific Folder**  
-cd user/desktop/myFolder/
+**6. Go to a Specific Path**  
+- All: `cd path/to/folder`
 
-**7. Go Up One Directory (again)**  
-cd ..
+**7. Go to Home Directory**  
+- PowerShell: `cd ~`  
+- Unix/macOS: `cd ~`  
+- CMD: `cd %HOMEPATH%`
 
 ---
 
 ## 📂 File & Folder Management
 
 **8. Create a New Folder**  
-mkdir myFolder
+- CMD: `mkdir folderName`  
+- PowerShell / Unix: `mkdir folderName`
 
-**9. Create a New Folder (another example)**  
-mkdir new-folder
+**9. Create Nested Folders**  
+- CMD: `mkdir parent\child\grandchild`  
+- PowerShell / Unix: `mkdir -p parent/child/grandchild`
 
-**10. Create a New File**  
-touch index.html
+**10. Create a File**  
+- CMD: `echo. > filename.txt`  
+- PowerShell / Unix: `touch filename.txt`
 
-**11. Create a File Inside a Folder**  
-touch new-folder/style.css
+**11. View File Content**  
+- CMD / PowerShell: `type filename.txt`  
+- Unix/macOS: `cat filename.txt`
 
-**12. Show All Files in the Directory**  
-ls
+**12. Rename or Move a File**  
+- CMD / PowerShell / Unix: `mv old.txt new.txt`
 
-**13. Check Contents of a Folder**  
-ls new-folder/
+**13. Move File to Another Folder**  
+- CMD / PowerShell / Unix: `mv file.txt folderName/`
 
-**14. Rename a File**  
-mv index.html aboutUs.html
+**14. Copy a File**  
+- CMD / PowerShell / Unix: `copy file.txt copy.txt` (CMD uses `copy`, Unix uses `cp`)
 
-**15. Copy and Paste File Outside the Folder**  
-cp style.css ..
+**15. Copy to Another Folder**  
+- CMD: `copy file.txt folderName\`  
+- Unix/macOS: `cp file.txt folderName/`
 
 **16. Delete a File**  
-rm style.css
+- CMD / PowerShell: `del file.txt`  
+- Unix/macOS: `rm file.txt`
 
-**17. Delete a Folder**  
-rm -rf new-folder/
+**17. Delete a Folder and Its Contents**  
+- CMD / PowerShell: `rmdir /s /q folderName`  
+- Unix/macOS: `rm -rf folderName/`
+
+---
+
+## 👤 User & System Info
+
+**18. Show Current User**  
+- All: `whoami`
+
+**19. Show Current Date and Time**  
+- CMD: `date /T` and `time /T`  
+- PowerShell: `Get-Date`  
+- Unix/macOS: `date`
+
+**20. Show System Uptime**  
+- CMD: `systeminfo` → look for "System Boot Time"  
+- PowerShell: `Get-Uptime`  
+- Unix/macOS: `uptime`
+
+**21. Show Logged In Users**  
+- CMD: `query user`  
+- Unix/macOS: `who`
+
+---
+
+## 🧰 Search & History
+
+**22. Search for a File by Name**  
+- PowerShell: `Get-ChildItem -Recurse -Filter "filename.txt"`  
+- Unix/macOS: `find . -name "filename.txt"`
+
+**23. Search Inside a File**  
+- PowerShell: `Select-String -Path filename.txt -Pattern "text"`  
+- Unix/macOS: `grep "text" filename.txt`
+
+**24. Show Command History**  
+- CMD / PowerShell: Use up/down arrows or `doskey /history`  
+- Unix/macOS: `history`
 
 ---
 
 ## 🧹 Miscellaneous
 
-**18. Clear the Terminal Window**  
-clear  
-Ctrl + L
+**25. Clear the Terminal Window**  
+- CMD: `cls`  
+- PowerShell / Unix: `clear`  
+- Shortcut (most): `Ctrl + L`
+
+**26. Repeat Last Command**  
+- Unix/macOS: `!!`  
+- CMD: Up arrow  
+- PowerShell: Up arrow
+
+**27. Run Command as Admin / Superuser 🔒**  
+- CMD: Run terminal as Administrator  
+- PowerShell: Use **Run as Administrator**  
+- Unix/macOS: `sudo command`
 
 ---
 
-🧾 _These terminal commands serve as essential tools for efficiently working within the command-line interface._
+🧾 _These commands are foundational for any developer or system user working across operating systems. Use responsibly, especially with delete and move operations._
+
