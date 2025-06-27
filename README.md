@@ -4,7 +4,7 @@
 
 👉 [Basics of Terminal Commands](BasicsOfTerminal.md)\
 👉 [Git In-Depth Notes](GitInDepth.md)\
-👉 [GitHub In-Depth Notes](GithubInDepth.md)\
+👉 [GitHub In-Depth Notes](GithubInDepth.md)
 
 A handy list of commonly used Git commands with brief explanations.
 
